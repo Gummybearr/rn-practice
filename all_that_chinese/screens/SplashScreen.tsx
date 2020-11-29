@@ -1,15 +1,11 @@
 import React, {useEffect} from 'react'
 import { View, Text, StyleSheet, StatusBar } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
+import { NavigationContainer } from '@react-navigation/native'
 
 import Logo from '../components/Logo';
 
 const SplashScreen = (props: any) => {
-
-    setTimeout(() => {
-        console.log('okay');
-    }, 2000);
-    
     return (<View style={styles.background} >
         <LinearGradient 
             start={{x: 0.0, y: 0.25}} end={{x: 0.5, y: 1.0}} 
