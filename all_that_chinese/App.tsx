@@ -12,17 +12,23 @@ import React, { useState, useEffect } from 'react';
 import { View, StatusBar, Text } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from '@react-navigation/native';
-
-import SplashScreen from './screens/SplashScreen';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-import HomeScreen from './screens/HomeScreen';
+import { createDrawerNavigator } from '@react-navigation/drawer'; 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-vector-icons/Icon';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import SplashScreen from './screens/SplashScreen';
+import HomeScreen from './screens/HomeScreen';
+import MyPageScreen from './screens/MyPageScreen';
+import LearnScreen from './screens/LearnScreen';
+import CommunityScreen from './screens/LearnScreen';
 
 declare const global: {HermesInternal: null | {}};
 
 const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
 
 const splashScreen = (props: any) => {
   setTimeout(() => {
@@ -30,8 +36,6 @@ const splashScreen = (props: any) => {
   }, props.route.params.duration*1000)
   return (<SplashScreen/>)
 }
-
-const Tab = createBottomTabNavigator();
 
 const HomeScreenWithNavigation = () => {
   return (
@@ -48,7 +52,7 @@ const HomeScreenWithNavigation = () => {
       />
       <Tab.Screen 
         name="learn" 
-        component={HomeScreen}
+        component={LearnScreen}
         options={{
           title: "학습하기",
           tabBarIcon: () => {
@@ -58,7 +62,7 @@ const HomeScreenWithNavigation = () => {
       />
       <Tab.Screen 
         name="Community" 
-        component={HomeScreen}
+        component={CommunityScreen}
         options={{
           title: "커뮤티니",
           tabBarIcon: () => {
@@ -68,7 +72,7 @@ const HomeScreenWithNavigation = () => {
       />
       <Tab.Screen 
         name="myPage" 
-        component={HomeScreen}
+        component={MyPageScreen}
         options={{
           title: "마이페이지",
           tabBarIcon: () => {
@@ -77,6 +81,14 @@ const HomeScreenWithNavigation = () => {
         }}
       />
     </Tab.Navigator>
+  );
+}
+
+const HomeScreenWithNavigationDrawer = () => {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen name="Home" component={HomeScreenWithNavigation}/>
+    </Drawer.Navigator>
   );
 }
 
@@ -94,7 +106,7 @@ const App = () => {
           />
           <Stack.Screen
             name="Home"
-            component={HomeScreenWithNavigation}
+            component={HomeScreenWithNavigationDrawer}
             options={{headerShown: false}}
           />
         </Stack.Navigator>
