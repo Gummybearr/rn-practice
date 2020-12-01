@@ -22,7 +22,7 @@ import SplashScreen from './screens/SplashScreen';
 import HomeScreen from './screens/HomeScreen';
 import MyPageScreen from './screens/MyPageScreen';
 import LearnScreen from './screens/LearnScreen';
-import CommunityScreen from './screens/LearnScreen';
+import CommunityScreen from './screens/CommunityScreen';
 
 declare const global: {HermesInternal: null | {}};
 

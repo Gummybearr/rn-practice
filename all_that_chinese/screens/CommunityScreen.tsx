@@ -1,20 +1,18 @@
 import React from 'react';
 import { View, Text, ScrollView, StyleSheet } from 'react-native';
-
 import TopNavigationBar from '../components/TopNavigationBar';
 
-const LearnScreen = () => {
+const CommunityScreen = () => {
     return (
-        <ScrollView>
+        <View>
+            <ScrollView>
             <View style={styles.view}>
                 <View>
                     <TopNavigationBar/>
                 </View>
-                <View style={styles.elements}>
-                    <Text>React useState practice</Text>
-                </View>
             </View>
         </ScrollView>
+        </View>
     );
 }
 
@@ -32,4 +30,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default LearnScreen;
+export default CommunityScreen;
