@@ -1,14 +1,25 @@
-import React from 'react';
-import { View, Text, ScrollView, StyleSheet } from 'react-native';
+import React, {useState, useEffect} from 'react';
+import { View, Text, ScrollView, StyleSheet, Button } from 'react-native';
 
 import TopNavigationBar from '../components/TopNavigationBar';
 
 const LearnScreen = () => {
+    const [count, setCount] = useState(() => {
+        return 0;
+    });
+
+    const incraseCount = () => {
+        setCount(prevCount =>  prevCount+1);
+    }
+
     return (
         <ScrollView>
             <View style={styles.view}>
                 <View>
                     <TopNavigationBar/>
+                </View>
+                <View style={styles.elements}>
+                    <Button title={'Count: ' + count} onPress={incraseCount}></Button>
                 </View>
                 <View style={styles.elements}>
                     <Text>React useState practice</Text>
