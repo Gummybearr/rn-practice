@@ -10,7 +10,9 @@ const RoundButton = ( props ) => {
   const backgroundColor = props.backgroundColor || 'transparent';
   return (
     <TouchableHighlight style={[{backgroundColor}, styles.wrapper]}>
-      <Text style={[{color}, styles.buttonText]}>{text}</Text>
+      <View>   
+        <Text style={[{color}, styles.buttonText]}>{text}</Text>
+      </View>
     </TouchableHighlight>
   )
 }
@@ -27,7 +29,9 @@ const styles = StyleSheet.create({
     display: "flex",
     borderRadius: 40,
     borderWidth: 1,
-    borderColor: colors.white
+    borderColor: colors.white,
+    marginBottom: 15,
+    alignItems: "center"
   },
   buttonText: {
     fontSize: 16,
