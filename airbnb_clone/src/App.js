@@ -3,11 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 import LoggedOut from './screen/LoggedOut';
+import Login from './screen/Login';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <LoggedOut/>
+      <Login/>
       <StatusBar style="auto" />
     </View>
   );

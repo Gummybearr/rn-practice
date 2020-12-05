@@ -2,7 +2,7 @@ import React from 'react';
 import {StyleSheet, Text, View, Image, TouchableHighlight, ScroolView} from 'react-native';
 
 import RoundButton from '../components/buttons/RoundButton';
-import colors from '../styles/color';
+import Colors from '../styles/color';
 
 const LoggedOut = () => {
   return (
@@ -17,12 +17,12 @@ const LoggedOut = () => {
         </Text>
         <RoundButton
           text="Login"
-          color={colors.green01}
-          backgroundColor={colors.white}
+          color={Colors.green01}
+          backgroundColor={Colors.white}
         />    
         <RoundButton 
           text="Create Account" 
-          color={colors.white} 
+          color={Colors.white} 
         />     
         <TouchableHighlight
           style={styles.moreOptionsButton}
@@ -62,7 +62,7 @@ const styles = StyleSheet.create({
   wrapper: {
     flex: 1,
     display: "flex",
-    backgroundColor: colors.green01 
+    backgroundColor: Colors.green01 
   },
   welcomeWrapper: {
     flex: 1,
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   },
   welcomeText: {
     fontSize: 30,
-    color: colors.white,
+    color: Colors.white,
     fontWeight: "300",
     marginBottom: 40
   },
@@ -86,23 +86,23 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
   moreOptionsButtonText: {
-    color: colors.white,
+    color: Colors.white,
     fontSize: 16,
   },
   termsAndConditions: {
     flexWrap: 'wrap',
     alignItems: 'flex-start',
     flexDirection: 'row',
-    marginTop: 30,
+    marginTop: 15,
   },
   termsText: {
-    color: colors.white,
-    fontSize: 16,
+    color: Colors.white,
+    fontSize: 14,
     fontWeight: '600',
   },
   linkButton: {
     borderBottomWidth: 1,
-    borderBottomColor: colors.white,
+    borderBottomColor: Colors.white,
   },
 });
 
