@@ -17,6 +17,7 @@ import {
   Text,
   StatusBar,
 } from 'react-native';
+import firebase from 'react-native-firebase';
 
 import {
   Header,
@@ -29,6 +30,14 @@ import {
 declare const global: {HermesInternal: null | {}};
 
 const App = () => {
+
+  const getToken = async() => {
+    const firebaseToken = await firebase.messaging().getToken();
+    console.log(firebaseToken);
+  }
+
+  getToken();
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
