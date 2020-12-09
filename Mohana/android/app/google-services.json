@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1066999579139",
-    "project_id": "mohana-7f3d2",
-    "storage_bucket": "mohana-7f3d2.appspot.com"
+    "project_number": "191147423818",
+    "project_id": "mohana-4873e",
+    "storage_bucket": "mohana-4873e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1066999579139:android:6cd7b4ffacd93b59100436",
+        "mobilesdk_app_id": "1:191147423818:android:f5b84d901ddf3aeb5b8eb3",
         "android_client_info": {
           "package_name": "com.mohana"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1066999579139-titlqa1k3kre2srivvbhfn278juc5dpp.apps.googleusercontent.com",
+          "client_id": "191147423818-j395uo14g9iuo80lt267kmsuofj88pmm.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBy27XEClvpoJM_-tqvtwh81oz9ePYMCUs"
+          "current_key": "AIzaSyDaU9SdK-jbOJ39_Ta7svlR3UoFJimsdE4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1066999579139-titlqa1k3kre2srivvbhfn278juc5dpp.apps.googleusercontent.com",
+              "client_id": "191147423818-j395uo14g9iuo80lt267kmsuofj88pmm.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
